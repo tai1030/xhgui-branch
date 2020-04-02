@@ -10,14 +10,14 @@
 <div class="span3">
     <div class="sidebar-nav" style="height:840px;overflow: auto;">
         <ul class="nav nav-list">
-            <li class="nav-header">这次运行</li>
-            <li><strong>请求地址</strong> <a href="{{ url('url.view', {'url': result.meta('url')|simple_url }) }}">{{ result.meta('url') }}</a></li>
-            <li><strong>时间</strong> {{ result.date|date(date_format) }}</li>
+            <li class="nav-header">這次運行</li>
+            <li><strong>請求地址</strong> <a href="{{ url('url.view', {'url': result.meta('url')|simple_url }) }}">{{ result.meta('url') }}</a></li>
+            <li><strong>時間</strong> {{ result.date|date(date_format) }}</li>
             <li><strong>ID</strong> <a href="{{ url('custom.help', {id: result.id|trim }) }}">{{ result.id }}</a></li>
-            <li><strong>执行时间</strong> {{ result.get('main()', 'wt')|as_time }}</li>
-            <li><strong>CPU时间</strong> {{ result.get('main()', 'cpu')|as_time }}</li>
-            <li><strong>内存占用</strong> {{ result.get('main()', 'mu')|as_bytes }}</li>
-            <li><strong>内存使用峰值</strong> {{ result.get('main()', 'pmu')|as_bytes }}</li>
+            <li><strong>執行時間</strong> {{ result.get('main()', 'wt')|as_time }}</li>
+            <li><strong>CPU時間</strong> {{ result.get('main()', 'cpu')|as_time }}</li>
+            <li><strong>RAM佔用</strong> {{ result.get('main()', 'mu')|as_bytes }}</li>
+            <li><strong>RAM使用峰值</strong> {{ result.get('main()', 'pmu')|as_bytes }}</li>
 
             <li class="nav-header">GET</li>
             <li>{{ helpers.property_list('GET', result.meta('get')) }}</li>
@@ -36,28 +36,28 @@
 
     <div class="row-fluid">
         <a href="{{ url('run.compare', {base: result.id|trim }) }}" id="compare-button" class="btn back-link">
-            对比这次运行
+            對比這次運行
         </a>
         <a href="{{ url('run.flamegraph', {id: result.id|trim }) }}" class="btn back-link">
-            查看火焰图
+            查看火焰圖
         </a>
         <a href="{{ url('run.callgraph', {id: result.id|trim }) }}" class="btn back-link">
-            查看调用图
+            查看調用圖
         </a>
         <a href="#functions" class="btn back-link">
-            跳转到函数
+            跳轉到函數
         </a>
 
-        <h3>监控的函数</h3>
+        <h3>監控的函數</h3>
 
         <table class="table table-hover">
         <thead>
             <tr>
-                <th>函数</th>
-                <th class="right">调用次数</th>
-                <th class="right"><span class="tip" title="自身执行时间">自身执行时间</span></th>
-                <th class="right"><span class="tip" title="自身内存占用">自身内存占用</span></th>
-                <th class="right"><span class="tip" title="自身内存峰值">自身内存峰值</span></th>
+                <th>函數</th>
+                <th class="right">調用次數</th>
+                <th class="right"><span class="tip" title="自身執行時間">自身執行時間</span></th>
+                <th class="right"><span class="tip" title="自身RAM佔用">自身RAM佔用</span></th>
+                <th class="right"><span class="tip" title="自身RAM峰值">自身RAM峰值</span></th>
             </tr>
         </thead>
         <tbody>
@@ -78,19 +78,19 @@
         </tr>
         {% else %}
         <tr><td colspan="4">
-            你没有设置观察函数
-            <a href="{{ url('watch.list') }}">现在去添加一个观察函数</a>.
+            你沒有設置觀察函數
+            <a href="{{ url('watch.list') }}">現在去添加一個觀察函數</a>.
         </td></tr>
         {% endfor %}
         </tbody>
         </table>
 
-        <h3>SQL执行详情</h3>
+        <h3>SQL執行詳情</h3>
         <table class="table table-hover">
         <thead>
             <tr>
-                <th>执行时间</th>
-                <th>执行SQL</th>
+                <th>執行時間</th>
+                <th>執行SQL</th>
             </tr>
         </thead>
         <tbody>
@@ -101,7 +101,7 @@
         </tr>
         {% else %}
         <tr><td colspan="4">
-            没有SQL调用
+            沒有SQL調用
         </td></tr>
         {% endfor %}
         </tbody>
@@ -110,7 +110,7 @@
 
     <div class="row-fluid">
         <div class="span6">
-          <h3>执行耗时图</h3>
+          <h3>執行耗時圖</h3>
           <div id="wall-time-chart" class="chart-container"></div>
           <dl>
           {% for value in wall_time %}
@@ -121,7 +121,7 @@
         </div>
 
         <div class="span6">
-          <h3>内存消耗图</h3>
+          <h3>RAM消耗圖</h3>
           <div id="memory-usage-chart" class="chart-container"></div>
           <dl>
           {% for value in memory %}
@@ -136,7 +136,7 @@
 
 <div class="row-fluid">
   <div class="pull-right form-search">
-      <input type="search" id="function-filter" placeholder="根据函数名称过滤" />
+      <input type="search" id="function-filter" placeholder="根據函數名稱過濾" />
   </div>
 </div>
 
@@ -145,16 +145,16 @@
   <table class="table table-hover table-sort" id="function-calls">
     <thead>
         <tr>
-            <th>函数</th>
-            <th>调用次数</th>
-            <th>执行时间</th>
-            <th>CPU时间</th>
-            <th>内存占用</th>
-            <th>内存峰值</th>
-            <th>总执行时间</th>
-            <th>总CPU时间</th>
-            <th>总内存占用</th>
-            <th>总内存峰值</th>
+            <th>函數</th>
+            <th>調用次數</th>
+            <th>執行時間</th>
+            <th>CPU時間</th>
+            <th>RAM佔用</th>
+            <th>RAM峰值</th>
+            <th>總執行時間</th>
+            <th>總CPU時間</th>
+            <th>總RAM佔用</th>
+            <th>總RAM峰值</th>
         </tr>
     </thead>
     <tbody>

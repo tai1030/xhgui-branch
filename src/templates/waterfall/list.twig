@@ -15,10 +15,10 @@
     <form action="{{ url('waterfall.list') }}" method="get" class="row hide search-form form-inline">
         <a href="#" class="search-collapse close" title="Hide search form">&times;</a>
         <div class="control-group span4">
-            <label class="control-label" for="start_date">时间范围</label>
+            <label class="control-label" for="start_date">時間範圍</label>
             <div class="controls">
-                <input type="text" style="width: 150px;" name="request_start" value="{{ search.request_start }}" placeholder="开始时间" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
-                <input type="text" style="width: 150px;" name="request_end" value="{{ search.request_end }}" placeholder="结束时间" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                <input type="text" style="width: 150px;" name="request_start" value="{{ search.request_start }}" placeholder="開始時間" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                <input type="text" style="width: 150px;" name="request_end" value="{{ search.request_end }}" placeholder="結束時間" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
             </div>
         </div>
         <div class="control-group span2">
@@ -42,8 +42,8 @@
 <div class="row-fluid">
     {% if search is empty %}
     <div class="alert alert-info alert-block">
-        <h4>没有数据</h4>
-        <p>你需要设置一个搜索条件，IP或者Cookie</p>
+        <h4>沒有數據</h4>
+        <p>你需要設置一個搜索條件，IP或者Cookie</p>
     </div>
     {% else %}
     <div id="waterfall" class="chart-container waterfall"></div>
@@ -60,28 +60,28 @@
                 <th>
                     方法
                 </th>
-                <th>请求地址</th>
+                <th>請求地址</th>
                 <th>
-                    {{ helpers.sort_link('时间', base_url, 'time', paging, search) }}
+                    {{ helpers.sort_link('時間', base_url, 'time', paging, search) }}
                 </th>
                 <th class="right">
-                    <span class="tip" title="执行时间">
-                        {{ helpers.sort_link('执行时间', base_url, 'wt', paging, search) }}
+                    <span class="tip" title="執行時間">
+                        {{ helpers.sort_link('執行時間', base_url, 'wt', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="CPU 时间">
-                        {{ helpers.sort_link('CPU时间', base_url, 'cpu', paging, search) }}
+                    <span class="tip" title="CPU 時間">
+                        {{ helpers.sort_link('CPU時間', base_url, 'cpu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="内存占用">
-                        {{ helpers.sort_link('内存占用', base_url, 'mu', paging, search) }}
+                    <span class="tip" title="RAM佔用">
+                        {{ helpers.sort_link('RAM佔用', base_url, 'mu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="内存峰值">
-                        {{ helpers.sort_link('内存峰值', base_url, 'pmu', paging, search) }}
+                    <span class="tip" title="RAM峰值">
+                        {{ helpers.sort_link('RAM峰值', base_url, 'pmu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">

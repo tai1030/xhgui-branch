@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block title %}
-- 火焰图 - {{ profile.meta.url }} - {{ profile.meta('SERVER.REQUEST_TIME')|date(date_format) }}
+- 火焰圖 - {{ profile.meta.url }} - {{ profile.meta('SERVER.REQUEST_TIME')|date(date_format) }}
 {% endblock %}
 
 {% block content %}
 <div class="row-fluid">
     <a class="back-link" href="{{ url('run.view', {'id': profile.id|trim}) }}">&laquo; 返回</a>
-    <h1>火焰图： {{ profile.meta.url }}</h1>
+    <h1>火焰圖： {{ profile.meta.url }}</h1>
     <h4>{{ profile.meta('SERVER.REQUEST_TIME')|date(date_format) }}</h4>
 </div>
 
@@ -33,7 +33,7 @@
 </div>
 
 <div class="alert alert-info">
-    火焰图将长时间运行的方法以及有深层调用堆栈的方法可视化。
+    火焰圖將長時間運行的方法以及有深層調用堆棧的方法可視化。
 </div>
 {% endblock %}
 

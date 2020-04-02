@@ -62,7 +62,7 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
             'search' => $search,
             'paging' => $paging,
             'base_url' => 'waterfall.list',
-            'title' => '瀑布图',
+            'title' => '瀑布圖',
             'date_format' => $this->_app->config('date.format')
         ));
     }

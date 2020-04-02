@@ -31,11 +31,11 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'projection' => true,
         ));
 
-        $title = '最近运行';
+        $title = '最近運行';
         $titleMap = array(
-            'wt' => '执行时间',
-            'cpu' => 'CPU时间',
-            'mu' => '内存使用',
+            'wt' => '執行時間',
+            'cpu' => 'CPU時間',
+            'mu' => 'RAM使用',
         );
         if (isset($titleMap[$sort])) {
             $title = $titleMap[$sort];
@@ -112,7 +112,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'memory' => $memoryChart,
             'watches' => $watchedFunctions,
             'date_format' => $this->_app->config('date.format'),
-            'title' => '函数监控',
+            'title' => '函數監控',
             'sql' => $result->getSQL()
         ));
     }

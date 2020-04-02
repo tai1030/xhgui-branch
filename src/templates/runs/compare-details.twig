@@ -4,18 +4,18 @@
     <thead>
         <tr>
             <th>&nbsp;</th>
-            <th class="right">调用函数数量</th>
-            <th class="right">包含执行时间</th>
-            <th class="right">包含CPU时间</th>
-            <th class="right">包含内存占用</th>
-            <th class="right">包含内存占用峰值</th>
+            <th class="right">調用函數數量</th>
+            <th class="right">包含執行時間</th>
+            <th class="right">包含CPU時間</th>
+            <th class="right">包含RAM佔用</th>
+            <th class="right">包含RAM佔用峰值</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <th>
                 <span class="badge compare-base">
-                    基础 - {{ comparison.base.date|date(date_format) }}
+                    基礎 - {{ comparison.base.date|date(date_format) }}
                 </span>
                 <a target="_blank" href="{{ url('run.view', {id: comparison.base.id|trim}) }}">
                     {{ comparison.base.id }}
@@ -43,7 +43,7 @@
             <td class="right">{{ comparison.head.get('main()', 'pmu') |as_bytes }}</td>
         </tr>
         <tr>
-            <th>差异</th>
+            <th>差異</th>
             <td class="right">{{ comparison.diff.functionCount }}</td>
             <td class="right">{{ comparison.diff['main()'].wt|as_time }}</td>
             <td class="right">{{ comparison.diff['main()'].cpu|as_time }}</td>
@@ -51,7 +51,7 @@
             <td class="right">{{ comparison.diff['main()'].pmu|as_bytes }}</td>
         </tr>
         <tr>
-            <th>差异 %</th>
+            <th>差異 %</th>
             <td class="right">{{ comparison.diffPercent.functionCount|as_percent }}</td>
             <td class="right">{{ comparison.diffPercent['main()'].wt|as_percent }}</td>
             <td class="right">{{ comparison.diffPercent['main()'].cpu|as_percent }}</td>
@@ -63,24 +63,24 @@
 
 
 <div class="pull-right form-search">
-  <input type="search" id="function-filter" placeholder="根据函数过滤" />
+  <input type="search" id="function-filter" placeholder="根據函數過濾" />
 </div>
 
-<h3>详细</h3>
+<h3>詳細</h3>
 
 <table class="table table-hover table-sort" id="filter-table">
     <thead>
         <tr>
-            <th>函数</th>
-            <th>调用次数</th>
-            <th>自身执行时间</th>
-            <th>自身CPU时间</th>
-            <th>自身内存占用</th>
-            <th>自身内存占用峰值</th>
-            <th>包含执行时间</th>
-            <th>包含CPU时间</th>
-            <th>包含内存占用</th>
-            <th>包含内存占用峰值</th>
+            <th>函數</th>
+            <th>調用次數</th>
+            <th>自身執行時間</th>
+            <th>自身CPU時間</th>
+            <th>自身RAM佔用</th>
+            <th>自身RAM佔用峰值</th>
+            <th>包含執行時間</th>
+            <th>包含CPU時間</th>
+            <th>包含RAM佔用</th>
+            <th>包含RAM佔用峰值</th>
         </tr>
     </thead>
     <tbody>

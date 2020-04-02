@@ -7,7 +7,7 @@
   <div class="row-fluid">
 
     <div class="span5">
-      <h2>选择查询条件</h2>
+      <h2>選擇查詢條件</h2>
       <form>
         <textarea style="width: 300px;height: 80px;" id="selection">{"meta.url" : "/index.php"}</textarea>
       </form>
@@ -15,15 +15,15 @@
 
 
     <div class="span5">
-      <h2>选择显示的参数</h2>
+      <h2>選擇顯示的參數</h2>
       <form>
         <textarea style="width: 300px;height: 80px;" id="retrieve">{"meta" : true, "profile.main()" : true}</textarea>
       </form>
     </div><!--/span-->
     
     <div class="span2">
-      <h2>帮助</h2>
-      <p>别担心, <a href="{{ url('custom.help') }}">有指南</a>。</p>
+      <h2>幫助</h2>
+      <p>別擔心, <a href="{{ url('custom.help') }}">有指南</a>。</p>
     
     </div><!--/span-->
   
@@ -31,7 +31,7 @@
     <div class="row-fluid">
 
     <div class="span12">
-        <div class="btn btn-large" style="display: block; margin-left: auto; margin-right: auto; width: 150px;" id="runbutton">运行</div>
+        <div class="btn btn-large" style="display: block; margin-left: auto; margin-right: auto; width: 150px;" id="runbutton">運行</div>
 		<div style="display: block; margin-left: auto; margin-right: auto; width: 150px; display: none" id="loading"><img src="{{ static('img/loading.gif') }}"></div>
     </div><!--/span-->
   
@@ -39,12 +39,12 @@
   <table class="table table-hover" id="results">
     <thead>
         <tr>
-            <th>请求地址</th>
-            <th>时间</th>
-            <th><span class="tip" title="执行时间	">执行时间</span></th>
-            <th><span class="tip" title="CPU时间">CPU时间</span></th>
-            <th><span class="tip" title="内存占用">内存占用</span></th>
-            <th><span class="tip" title="内存峰值">内存峰值</span></th>
+            <th>請求地址</th>
+            <th>時間</th>
+            <th><span class="tip" title="執行時間	">執行時間</span></th>
+            <th><span class="tip" title="CPU時間">CPU時間</span></th>
+            <th><span class="tip" title="RAM佔用">RAM佔用</span></th>
+            <th><span class="tip" title="RAM峰值">RAM峰值</span></th>
         </tr>
     </thead>
     <tbody>
@@ -86,10 +86,10 @@
                     $('#results tbody').empty();
                     $("#runbutton").show();
                     $("#loading").hide();
-                    if (data.hasOwnProperty('error'))
+                    if (data.function hasOwnProperty() { [native code] }('error'))
                     {
                       console.log(data.error);
-                      if (data.error.hasOwnProperty('query'))
+                      if (data.error.function hasOwnProperty() { [native code] }('query'))
                       {
                         $('#selection').animate(
                         { backgroundColor: '#FFD9D9'}, 
@@ -100,7 +100,7 @@
                         );
                       }
                       
-                      if (data.error.hasOwnProperty('retrieve'))
+                      if (data.error.function hasOwnProperty() { [native code] }('retrieve'))
                       {
                         $('#retrieve').animate(
                         { backgroundColor: '#FFD9D9'}, 
